@@ -1,6 +1,8 @@
 package tests;
 
 import android.test.ActivityInstrumentationTestCase2;
+import android.widget.TextView;
+
 import com.example.sharmaine.lab3.MainActivity;
 import com.example.sharmaine.lab3.R;
 
@@ -16,9 +18,8 @@ public class JUnit_test extends ActivityInstrumentationTestCase2<MainActivity> {
     public void test_first() {
         mainActivity = getActivity();
         TextView textView = (TextView) mainActivity.findViewById(R.id.textView1);
-        
         String tester = textView.getText().toString();
-        assertEquals("Bye World", tester);
+        assertEquals("Hello World!", tester);
     }
 
 }
